@@ -30,19 +30,18 @@ function multiply() {
 }
 
 
-var expanded = false;
+
 // expand input boxes or shrink if already expanded
 function expandInputs() {
-    if (!expanded) {
-        expanded = true;
+    if (!this.expanded) {
+        this.expanded = true;
         this.parentNode.children[2].classList.add('full-width-toggle');
         this.parentNode.children[3].classList.add('full-width-toggle');
     } else {
         this.parentNode.children[2].classList.remove('full-width-toggle');
         this.parentNode.children[3].classList.remove('full-width-toggle');
-        expanded = false;
+        this.expanded = false;
     }
-    
 }
 
 // add event listeners
